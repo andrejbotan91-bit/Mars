@@ -156,9 +156,10 @@ body {
     border: 2px solid var(--primary);
 }
 .iframe-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
+    width: 350px
+    height: 200px;
+    border: 5px;
+    border-radius: 3px:
 }
 .facts-columns {
     column-count: 2;
