@@ -1,0 +1,194 @@
+<head>
+<link rec="styleheet" href="style.css">
+</head>
+:root {
+    --primary: #e64a19;
+    --primary-light: #ff7043;
+    --dark: #0d0d0d;
+    --light: #f5f5f5;
+    --gray: #222;
+    --transition: all 0.3s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--dark);
+    color: var(--light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(13, 13, 13, 0.95);
+    padding: 20px 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--primary);
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.logo span { color: var(--primary); }
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+.nav-links a:hover { color: var(--primary); }
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1614314107768-6018061b304f?auto=format&fit=crop&q=80&w=1600') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.hero-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-light);
+    text-shadow: 0 0 30px rgba(230, 74, 25, 0.5);
+}
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+.btn {
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    display: inline-block;
+    margin: 10px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #fff;
+}
+.btn-primary:hover {
+    background: var(--primary-light);
+    transform: translateY(-5px);
+}
+.btn-outline {
+    border: 2px solid #fff;
+    color: #fff;
+}
+.btn-outline:hover {
+    background: #fff;
+    color: var(--dark);
+}
+.section { padding: 100px 0; }
+.bg-dark { background-color: #050505; }
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+.presentation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.pres-card {
+    background: var(--gray);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+.pres-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+.pres-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.card-text { padding: 30px; }
+.card-text h3 { margin-bottom: 15px; color: var(--primary-light); 
+.iframe-container {
+    width: 100%;
+    height: 600px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 2px solid var(--primary);
+}
+.iframe-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.facts-columns {
+    column-count: 2;
+    column-gap: 50px;
+    background: #111;
+    padding: 50px;
+    border-radius: 40px;
+    border: 1px solid #333;
+}
+ol li {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #222;
+    padding-left: 10px;
+}
+ol li:hover {
+    color: var(--primary-light);
+    cursor: pointer;
+}
+.footer {
+    padding: 60px 0;
+    background: #000;
+    text-align: center;
+    border-top: 1px solid var(--primary);
+}
+@media (max-width: 992px) {
+    .facts-columns { column-count: 1; }
+    .hero-content h1 { font-size: 3rem; }
+}
+@media (max-width: 600px) {
+    .nav-links { display: none; }
+    .hero-content h1 { font-size: 2.2rem; }
+}
